@@ -3,209 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alchemy Fusion Technologies</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #8b3dff;
+            color: white;
         }
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            color: #00bcd4; /* Teal */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
         header {
-            background: url('https://via.placeholder.com/1920x800/333/fff?text=Alchemy+Fusion+Technologies') center center/cover no-repeat fixed;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            background: linear-gradient(to bottom, #8b3dff, #5e29d1);
+            background-attachment: fixed;
         }
+
         header h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            animation: fadeIn 2s ease-in-out;
         }
+
         header p {
-            font-size: 1.5rem;
-            opacity: 0.8;
+            font-size: 1.5em;
+            max-width: 600px;
+            font-weight: 400;
+            animation: slideIn 2s ease-in-out;
         }
-        .btn {
-            display: inline-block;
-            background-color: #00bcd4; /* Teal */
-            color: white;
-            padding: 1rem 2rem;
-            margin-top: 2rem;
-            font-size: 1.2rem;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            border-radius: 5px;
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #8b3dff;
         }
-        .btn:hover {
-            background-color: #0288d1; /* Blue */
-            transform: scale(1.1);
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInUp 1.5s ease-in-out;
         }
-        .main-content {
-            padding: 3rem;
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .highlight-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            text-align: left;
+            background-color: #8b3dff;
+        }
+
+        .highlight-section .text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
             text-align: center;
         }
-        .main-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #ddd;
+
+        .highlight-section .text h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInUp 1.5s ease-in-out;
         }
-        .video-wrapper {
-            margin-top: 2rem;
+
+        .highlight-section .text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            font-weight: 400;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .highlight-section .gif {
+            flex: 1;
+            min-width: 300px;
             text-align: center;
         }
-        iframe {
+
+        .highlight-section .gif img {
             width: 100%;
-            height: 500px;
-            border-radius: 10px;
+            max-width: 400px;
+            animation: fadeIn 2s ease-in-out;
         }
-        .parallax {
-            background: url('https://via.placeholder.com/1920x1080/333/fff?text=Parallax+Background') no-repeat fixed center center;
-            background-size: cover;
-            height: 100vh;
-        }
-        .services, .team, .clients, .contact {
-            padding: 3rem;
-            background-color: #1e1e1e;
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
             color: white;
         }
-        .services h2, .team h2, .clients h2, .contact h2 {
-            color: #00bcd4; /* Teal */
+
+        footer p {
+            font-size: 1em;
+            font-weight: 400;
+            animation: fadeIn 2s ease-in-out;
         }
-        .scroll-animation {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        .scroll-animation.visible {
-            opacity: 1;
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        .service-item, .team-member {
-            display: inline-block;
-            width: 30%;
-            margin: 1.5rem;
-            background: #333;
-            padding: 1.5rem;
-            border-radius: 8px;
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        .team-member img {
-            width: 100%;
-            border-radius: 50%;
-        }
-        .service-item h3, .team-member h3 {
-            color: #00bcd4; /* Teal */
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .section p {
+                font-size: 1em;
+            }
+
+            .highlight-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .highlight-section .text {
+                margin-bottom: 20px;
+            }
+
+            .highlight-section .gif img {
+                max-width: 300px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Alchemy Fusion Technologies</h1>
-            <p>Innovating the Future, One Technology at a Time</p>
-            <a href="#services" class="btn">Explore Our Services</a>
-        </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Welcome to Alchemy Fusion Technologies</h1>
+        <p>Where innovation meets excellence. We craft solutions that transform businesses into leaders.</p>
     </header>
 
-    <div class="main-content">
+    <section id="about" class="section">
         <h2>About Us</h2>
-        <p>We are pioneers in providing state-of-the-art solutions to empower businesses across the globe. With our innovative strategies and technologies, we bring transformative results that make a difference.</p>
-    </div>
+        <p>At Alchemy Fusion Technologies, we specialize in delivering cutting-edge solutions that empower our clients to stay ahead in the digital era. Our expertise spans across various domains, ensuring excellence in every project.</p>
+    </section>
 
-    <div class="parallax"></div>
-
-    <div id="services" class="services">
+    <section id="services" class="section">
         <h2>Our Services</h2>
-        <p>We offer a variety of services tailored to your needs, including cloud solutions, AI, web development, and much more!</p>
-        <div class="service-item scroll-animation">
-            <h3>Web Development</h3>
-            <p>Building robust, scalable, and efficient web applications using the latest technologies.</p>
-        </div>
-        <div class="service-item scroll-animation">
-            <h3>AI Solutions</h3>
-            <p>Transforming industries through intelligent AI-driven solutions that bring automation and insights.</p>
-        </div>
-        <div class="service-item scroll-animation">
-            <h3>Cloud Solutions</h3>
-            <p>We provide cloud infrastructure and solutions that improve scalability and security for businesses.</p>
-        </div>
-    </div>
+        <p>From web development to cloud solutions, we provide a comprehensive range of services designed to meet your unique needs and drive your business forward.</p>
+    </section>
 
-    <div class="parallax"></div>
+    <section id="highlight" class="highlight-section">
+        <div class="text">
+            <h2>Learn More</h2>
+            <p>24/7 Customer Support</p>
+            <p>Highlight specific services or products that are unique to your business here. It can be your flagship product, or a service that you've pioneered. Give it room to shine here.</p>
+        </div>
+        <div class="gif">
+            <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Highlight Animation">
+        </div>
+    </section>
 
-    <div id="team" class="team">
+    <section id="team" class="section">
         <h2>Our Team</h2>
-        <p>Meet the minds behind our innovative solutions. Our diverse team of experts is dedicated to bringing you the best services possible.</p>
-        <div class="team-member scroll-animation">
-            <img src="https://via.placeholder.com/150" alt="Team Member">
-            <h3>John Doe</h3>
-            <p>CEO & Founder</p>
-        </div>
-        <div class="team-member scroll-animation">
-            <img src="https://via.placeholder.com/150" alt="Team Member">
-            <h3>Jane Smith</h3>
-            <p>CTO</p>
-        </div>
-        <div class="team-member scroll-animation">
-            <img src="https://via.placeholder.com/150" alt="Team Member">
-            <h3>Emily Davis</h3>
-            <p>Lead Developer</p>
-        </div>
-    </div>
+        <p>Our team comprises highly skilled professionals dedicated to delivering exceptional results. Together, we bring your vision to life.</p>
+    </section>
 
-    <div class="parallax"></div>
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <p>Explore our portfolio to see the innovative projects we have delivered for clients across industries.</p>
+    </section>
 
-    <div id="video" class="video-wrapper">
-        <h2>Watch Our Story</h2>
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+    <section id="careers" class="section">
+        <h2>Careers</h2>
+        <p>Join our dynamic team and shape the future of technology. We are always on the lookout for talented individuals who share our passion for innovation.</p>
+    </section>
 
-    <div class="parallax"></div>
-
-    <div id="clients" class="clients">
-        <h2>Our Clients</h2>
-        <p>We have had the privilege of working with some of the best companies worldwide.</p>
-        <div class="scroll-animation">Client 1</div>
-        <div class="scroll-animation">Client 2</div>
-        <div class="scroll-animation">Client 3</div>
-    </div>
-
-    <div class="parallax"></div>
-
-    <div id="contact" class="contact">
+    <section id="contact" class="section">
         <h2>Contact Us</h2>
-        <p>Ready to transform your business? Get in touch with us today!</p>
-        <a href="mailto:contact@alchemyfusion.com" class="btn">Email Us</a>
-    </div>
+        <p>Have questions or want to collaborate? Reach out to us, and let's create something amazing together.</p>
+    </section>
 
-    <script>
-        window.addEventListener("scroll", () => {
-            let elements = document.querySelectorAll('.scroll-animation');
-            elements.forEach(el => {
-                let position = el.getBoundingClientRect().top;
-                if (position - window.innerHeight <= 0) {
-                    el.classList.add('visible');
-                }
-            });
-        });
-    </script>
+    <footer>
+        <p>&copy; 2025 Alchemy Fusion Technologies. All rights reserved.</p>
+    </footer>
 </body>
 </html>
