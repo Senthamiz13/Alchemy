@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alchemy Fusion Technologies</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: #00bcd4; /* Teal */
+        }
+        header {
+            background: url('https://via.placeholder.com/1920x800/333/fff?text=Alchemy+Fusion+Technologies') center center/cover no-repeat fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #00bcd4; /* Teal */
+            color: white;
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0288d1; /* Blue */
+            transform: scale(1.1);
+        }
+        .main-content {
+            padding: 3rem;
+            text-align: center;
+        }
+        .main-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ddd;
+        }
+        .video-wrapper {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .parallax {
+            background: url('https://via.placeholder.com/1920x1080/333/fff?text=Parallax+Background') no-repeat fixed center center;
+            background-size: cover;
+            height: 100vh;
+        }
+        .services, .team, .clients, .contact {
+            padding: 3rem;
+            background-color: #1e1e1e;
+            color: white;
+        }
+        .services h2, .team h2, .clients h2, .contact h2 {
+            color: #00bcd4; /* Teal */
+        }
+        .scroll-animation {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .scroll-animation.visible {
+            opacity: 1;
+        }
+        .service-item, .team-member {
+            display: inline-block;
+            width: 30%;
+            margin: 1.5rem;
+            background: #333;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .service-item h3, .team-member h3 {
+            color: #00bcd4; /* Teal */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Alchemy Fusion Technologies</h1>
+            <p>Innovating the Future, One Technology at a Time</p>
+            <a href="#services" class="btn">Explore Our Services</a>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h2>About Us</h2>
+        <p>We are pioneers in providing state-of-the-art solutions to empower businesses across the globe. With our innovative strategies and technologies, we bring transformative results that make a difference.</p>
+    </div>
+
+    <div class="parallax"></div>
+
+    <div id="services" class="services">
+        <h2>Our Services</h2>
+        <p>We offer a variety of services tailored to your needs, including cloud solutions, AI, web development, and much more!</p>
+        <div class="service-item scroll-animation">
+            <h3>Web Development</h3>
+            <p>Building robust, scalable, and efficient web applications using the latest technologies.</p>
+        </div>
+        <div class="service-item scroll-animation">
+            <h3>AI Solutions</h3>
+            <p>Transforming industries through intelligent AI-driven solutions that bring automation and insights.</p>
+        </div>
+        <div class="service-item scroll-animation">
+            <h3>Cloud Solutions</h3>
+            <p>We provide cloud infrastructure and solutions that improve scalability and security for businesses.</p>
+        </div>
+    </div>
+
+    <div class="parallax"></div>
+
+    <div id="team" class="team">
+        <h2>Our Team</h2>
+        <p>Meet the minds behind our innovative solutions. Our diverse team of experts is dedicated to bringing you the best services possible.</p>
+        <div class="team-member scroll-animation">
+            <img src="https://via.placeholder.com/150" alt="Team Member">
+            <h3>John Doe</h3>
+            <p>CEO & Founder</p>
+        </div>
+        <div class="team-member scroll-animation">
+            <img src="https://via.placeholder.com/150" alt="Team Member">
+            <h3>Jane Smith</h3>
+            <p>CTO</p>
+        </div>
+        <div class="team-member scroll-animation">
+            <img src="https://via.placeholder.com/150" alt="Team Member">
+            <h3>Emily Davis</h3>
+            <p>Lead Developer</p>
+        </div>
+    </div>
+
+    <div class="parallax"></div>
+
+    <div id="video" class="video-wrapper">
+        <h2>Watch Our Story</h2>
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div class="parallax"></div>
+
+    <div id="clients" class="clients">
+        <h2>Our Clients</h2>
+        <p>We have had the privilege of working with some of the best companies worldwide.</p>
+        <div class="scroll-animation">Client 1</div>
+        <div class="scroll-animation">Client 2</div>
+        <div class="scroll-animation">Client 3</div>
+    </div>
+
+    <div class="parallax"></div>
+
+    <div id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Ready to transform your business? Get in touch with us today!</p>
+        <a href="mailto:contact@alchemyfusion.com" class="btn">Email Us</a>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            let elements = document.querySelectorAll('.scroll-animation');
+            elements.forEach(el => {
+                let position = el.getBoundingClientRect().top;
+                if (position - window.innerHeight <= 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
